@@ -1,0 +1,33 @@
+.breadcrumb{
+    margin-bottom: 2.5rem;
+}
+
+.breadcrumb_wrapper{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.breadcrumb__link{
+    display: block;
+    text-decoration: none;
+    color: #8F8F8F;
+
+    transition: color .2s ease-in-out;
+
+    &:hover,
+    &:focus{
+        outline: none;
+        color: #494949;
+    }
+
+    &.active{
+        color: #494949;
+        cursor: default;
+    }
+}
+
+.breadcrumb__separator{
+    color: #8F8F8F;
+
+    padding: 0 .4rem;
+}

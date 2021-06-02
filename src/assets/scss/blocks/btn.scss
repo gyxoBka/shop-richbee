@@ -1,0 +1,78 @@
+.btn{
+    padding: 0;
+
+    width: 100%;
+    height: 4.5rem;
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: #383838;
+    text-transform: uppercase;
+
+    border: none;
+    background: none;
+    background-color: #FFD637;
+    border-radius: .4rem;
+
+    transition: color .2s ease-in-out,
+                background-color .2s ease-in-out;
+
+    &:hover,
+    &:focus{
+        color: #383838;
+        background-color: #FFC237;
+    }
+
+    &:active{
+        background-color: #FFD637;
+    }
+
+    &--secondary{
+        background-color: #F8F8F8;
+
+        &:hover,
+        &:focus{
+            background-color: #EFEFEF;
+        }
+
+        &:active{
+            background-color: #F8F8F8;
+        }
+    }
+
+    &--md{
+        width: 18.2rem;
+    }
+
+    &--lg{
+        width: 24.6rem;
+    }
+
+    &--fz{
+        font-size: 1.2rem;
+    }
+
+    &--first{
+        @include breakpoint(600px){
+            margin-bottom: 1rem;
+        }
+    }
+
+    &--form{
+        color: #FFD637;
+        background-color: #383838;
+
+        &:hover,
+        &:focus{
+            color: #FFFFFF;
+            background-color: #383838;
+        }
+
+        &:active{
+            background-color: #383838;
+        }
+
+        @include breakpoint(480px) {
+            width: 100%;
+        }
+    }
+}

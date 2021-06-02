@@ -1,0 +1,120 @@
+.profile{
+    display: flex;
+}
+
+.profile__wrapper{
+    display: flex;
+    align-items: center;
+
+    height: 4.8rem;
+    width: 18rem;
+
+    background-color: #F8F8F8;
+    border-radius: .4rem;
+    transition: background-color .2s ease-in-out;
+
+    cursor: pointer;
+
+    &:hover{
+        background-color: #EFEFEF;
+    }
+
+    &:active{
+        background-color: #F8F8F8;
+    }
+
+    &--left{
+        margin-right: 1.5rem;
+    }
+
+    @include breakpoint(770px) {
+        &--left{
+            width: auto;
+        }
+
+        @include breakpoint(375px) {
+            width: auto;
+        }
+    }
+}
+
+.profile__icon{
+    height: 4.8rem;
+    width: 5.2rem;
+
+    border-right: 1px solid #E4E4E4;
+
+    position: relative;
+
+    @include breakpoint(770px) {
+        &--left{
+            border-right: none;
+        }
+    }
+
+    @include breakpoint(375px) {
+        border-right: none;
+    }
+}
+
+.profile__img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    &.cart-items::after{
+        content: '';
+
+        display: block;
+
+        width: .9rem;
+        height: .9rem;
+
+        border-radius: 50%;
+        background-color: #F71412;
+
+        position: absolute;
+        top: 0;
+        right: -4px;
+
+        z-index: 2;
+    }
+}
+
+.profile__container{
+    margin-left: 1rem;
+    font-size: 1.3rem;
+
+    user-select: none;
+
+    @include breakpoint(770px) {
+        &--left{
+            display: none;
+        }
+
+        @include breakpoint(375px) {
+            display: none;
+        }
+    }
+}
+
+
+.profile__header,
+.profile__footer{
+    display: block;
+    text-decoration: none;
+    outline: none !important;
+    line-height: 1.2;
+}
+
+.profile__header{
+    font-weight: 500;
+    color: #383838;
+}
+
+.profile__footer{
+    font-weight: 400;
+    color: #ACACAC;
+}

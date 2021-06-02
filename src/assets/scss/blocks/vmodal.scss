@@ -1,0 +1,60 @@
+.vmodal__container{
+    padding: 3rem 4.8rem 6rem 4rem;
+    box-shadow: none;
+}
+
+.vmodal__header{
+    border-bottom: none;
+    padding: 0;
+    margin-bottom: 4rem;
+}
+
+.vmodal__footer{
+    justify-content: space-between;
+    border-top: none;
+    padding-top: 3rem;
+
+    @include breakpoint(600px){
+        justify-content: center;
+    }
+}
+
+.vmodal__body{
+    padding: 0;
+}
+
+.vmodal__overlay{
+    backdrop-filter: blur(1px);
+}
+
+.vmodal__close{
+    position: absolute;
+    top: 3rem;
+    right: 3rem;
+    opacity: 1;
+
+    transition: transform .2s ease-in-out;
+
+    &:hover{
+        transform: rotate(90deg);
+    }
+
+    &:active{
+        opacity: 1;
+    }
+
+    svg{
+        width: 2.2rem;
+        height: 2.2rem;
+        stroke: #B8B8B8;
+    }
+}
+
+.vmodal__subtitle{
+    margin-bottom: 3rem;
+    
+    @include adaptive-font(36, 30);
+    font-weight: 700;
+    line-height: 1;
+    color: #0B0B0B;
+}

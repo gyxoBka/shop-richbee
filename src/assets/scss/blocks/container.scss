@@ -1,0 +1,19 @@
+.container{
+    display: block;
+    max-width: $maxWidth;
+    height: 100%;
+    
+    margin: 0 auto;
+
+    @include breakpoint(1210px) {
+        padding: 0 1rem;
+    }
+
+    &--analog{
+        position: relative;
+
+        @include breakpoint($maxWidth){
+            margin: 0 2rem;
+        }
+    }
+}

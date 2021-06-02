@@ -1,0 +1,56 @@
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "vendor/reset";
+@import "vendor/vmodal";
+@import "vendor/vtooltip";
+
+*,
+*:before,
+*:after{
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+
+body {
+    background-color: #fff;
+    font-family: Roboto;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    font-weight: 400;
+    color: $black;
+
+    overflow-x: hidden;
+}
+
+.hidden{
+    display: none
+}
+
+@import "blocks/container";
+@import "blocks/header";
+@import "blocks/nav";
+@import "blocks/icon";
+@import "blocks/logo";
+@import "blocks/search";
+@import "blocks/profile";
+@import "blocks/menu";
+@import "blocks/footer";
+@import "blocks/form";
+@import "blocks/wrapper";
+@import "blocks/breadcrumb";
+@import "blocks/card";
+@import "blocks/btn";
+@import "blocks/analog";
+@import "blocks/product";
+@import "blocks/slider";
+@import "blocks/description";
+@import "blocks/stock-table";
+@import "blocks/vmodal";
+@import "blocks/auth";
+@import "blocks/burger";
+@import "blocks/dots";

@@ -1,0 +1,127 @@
+.form{
+    display: block;
+    width: min-content;
+
+    @include breakpoint(650px) {
+        margin: 0 auto;
+    }
+}
+
+.form__group{
+    display: flex;
+    justify-content: flex-end;
+
+    width: min-content;
+
+    @include breakpoint(480px) {
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+}
+
+.form__control{
+    display: block;
+    width: 25rem;
+    height: 4.5rem;
+    margin-right: 1.6rem;
+    padding: 1.4rem 1.9rem;
+
+    background-color: transparent;
+    border: 1px solid #383838;
+    box-shadow: none;
+    border-radius: .4rem;
+
+    font-family: inherit;
+    font-size: 1.4rem;
+    color: $black;
+
+    &::placeholder{
+        color: #000;
+    }
+
+    &--btn{
+        padding: 0;
+
+        width: 18.2rem;
+        font-weight: 700;
+        font-size: 1.4rem;
+        color: #FFD637;
+
+        background-color: #383838;
+
+        transition: color .2s ease-in-out;
+
+        &:hover{
+            color: #FFFFFF;
+        }
+    }
+
+    &--incorrect{
+        box-shadow: 0px 0px 0px 1px #F71412 inset;
+    }
+
+    @include breakpoint(480px) {
+        margin-bottom: 1.6rem;
+        margin-right: 0;
+    }
+}
+
+.form__input_checkbox{
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.form__input_checkbox + label {
+	position: relative;
+	padding: 0 0 0 3.2rem;
+	cursor: pointer;
+}
+
+.form__input_checkbox + label:before {
+	content: '';
+
+    width: 1.8rem;
+	height: 1.8rem;
+
+    border-radius: .3rem;
+	border: 1px solid #383838;
+	transition: .2s;
+
+    position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.form__input_checkbox-fail + label:before {
+    box-shadow: inset 0 0 0 2px #F71412;
+}
+
+.form__input_checkbox:checked + label:after {
+	content: '';
+
+	width: 1.8rem;
+	height: 1.8rem;
+
+    border-radius: .3rem;
+	background-image: url(../images/check-mark.svg);
+	background-repeat: no-repeat;
+    background-position: 50%;
+
+    transition: .2s;
+
+    position: absolute;
+	top: 0;
+	left: 0;
+}
+.form__input_checkbox:checked + label:before {
+	background-color: #383838;
+    box-shadow: none;
+}
+
+.form__checkbox-wrapper{
+    display: flex;
+    width: 100%;
+    margin-top: 1.4rem;
+}

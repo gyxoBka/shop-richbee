@@ -1,0 +1,26 @@
+.logo {
+    margin-right: 2.81rem;
+    text-decoration: none;
+    
+    img {
+        &:first-child{
+            margin-right: 1.72rem;
+        }
+    }
+
+    @include breakpoint(930px) {
+        img {
+            &:first-child{
+                margin-right: 0;
+            }
+        }
+
+        .logo__name {
+            display: none;
+        }
+    }    
+
+    @include breakpoint(770px) {
+        margin-right: 1.5rem;
+    }
+}

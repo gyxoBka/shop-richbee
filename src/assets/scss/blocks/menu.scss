@@ -1,0 +1,152 @@
+.menu {
+    display: flex;
+
+    margin-top: 3.6rem;
+
+    @include breakpoint(1220px) {
+        width: max-content;
+        position: relative;
+
+        &.active .menu__link.has-subnav{
+            &:after{
+                transform: rotate(-225deg)
+            }
+        }
+    
+        &.active .menu__right{
+            opacity: 1;
+            height: 37.8rem;
+        }
+    }
+
+    @include breakpoint(600px) {
+        margin-top: 1rem;
+    }
+}
+
+.menu__left{
+    display: flex;
+    align-items: center;
+
+    padding-right: 2.5rem;
+    border-right: 1px solid #B8B8B8;
+
+    font-weight: 700;
+    color: #383838;
+
+    .menu__item{
+        &:not(:last-child) {
+            margin-right: 2.5rem;
+        }
+    }
+
+    @include breakpoint(1220px) {
+        border-right: none;
+        padding-right: 0;
+    }
+}
+
+.menu__right{
+    display: flex;
+    align-items: center;
+
+    flex-grow: 1;
+    flex-shrink: 1;
+
+    margin-left: 2.5rem;
+
+    color: #B8B8B8;
+    font-weight: 400;
+
+    .menu__item{
+        &:not(:last-child) {
+            margin-right: 2.3rem;
+        }
+    }
+
+    @include breakpoint(1220px) {
+        flex-direction: column;
+
+        margin-left: 0;
+
+        height: 0;
+        width: 100%;
+
+        background-color: #fff;
+        border-radius: 0 0 .4rem .4rem;
+        box-shadow: 0 0 10px rgba(#383838, .2);
+        
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: $z-index-menu;
+
+        opacity: 0;
+        overflow: hidden;
+        transition: height .2s linear,
+                    opacity .2s linear;
+
+
+        .menu__item{
+            width: 100%;
+            &:not(:last-child) {
+                margin-right: 0;
+
+                .menu__link {
+                    border-bottom: 1px solid rgba(#B8B8B8, .3);
+                }
+            }
+
+            .menu__link {
+                padding: 1rem 0;
+                transition: border .2s ease-in-out;
+
+                &:hover{
+                    border-bottom: 1px solid #FFD637;
+                }
+            }
+        }
+    }
+}
+
+.menu__link {
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: inherit;
+
+    border-bottom: 1px solid transparent;
+
+    transition: border .2s ease-in-out;
+
+    &:focus{
+        outline: none;
+    }
+
+    @include breakpoint(1220px) {
+        width: 100%;
+        text-align: center;
+
+        &.has-subnav{
+            position: relative;
+            padding-right: 1.5rem;
+    
+            &:after{
+                content: '';
+                display: block;
+                margin-top: -4px;
+                transform: rotate(-45deg);
+                border-bottom: solid 2px #383838;
+                border-left: solid 2px #383838;
+                height: 6px;
+                width: 6px;
+    
+                position: absolute;
+                top: 50%;
+                right: 0;
+    
+                transition: transform .2s ease;
+            }
+        }
+    }
+}

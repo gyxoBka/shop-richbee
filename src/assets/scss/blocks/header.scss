@@ -1,0 +1,35 @@
+.header{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.header__item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 4.5rem;
+
+    &--dark{
+        margin-bottom: 3.4rem;
+        position: relative;
+    }
+
+    &--client{
+        justify-content: flex-start;
+    }
+
+    @include breakpoint(600px) {
+        &--dark{
+            margin-bottom: 1rem;
+        }
+
+        &--client{
+            justify-content: space-between;
+        }
+    }
+}
+
+.header__wrapper{
+    background-color: #383838;
+}

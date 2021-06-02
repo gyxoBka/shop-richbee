@@ -1,0 +1,70 @@
+.stock-table{
+    width: 100%;
+    min-width: 87rem;
+    text-align: left;
+
+    th{
+        padding-bottom: 2rem;
+    }
+
+    td{
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+
+        font-size: 1.6rem;
+        font-weight: 400;
+        vertical-align: middle;
+    }
+
+    th:first-child,
+    td:first-child{
+        padding-left: 2.9rem;
+    }
+}
+
+.stock-table__header{
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1;
+    color: #797979;
+}
+
+.stock-table__row{
+    background-color: #F8F8F8;
+    border-radius: .3rem;
+
+    &:nth-child(2n+1){
+        background-color: transparent;
+    }    
+}
+
+.stock-table__item{
+    width: 15%;
+
+    &:first-child{
+        width: 40%;
+        max-width: 46.8rem;
+    }
+
+    &--available{
+        color: #32A73C;
+    }
+
+    &--unavailable{
+        color: #797979;
+    }   
+}
+
+.stock-table__item-adress{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    height: 8.8rem;
+    min-width: 29.1rem;
+}
+
+.stock-table__adress-title{
+    font-size: 1.8rem;
+    font-weight: 500;
+}
